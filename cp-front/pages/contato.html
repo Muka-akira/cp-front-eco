@@ -38,9 +38,14 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <a href="#" class="btn btn-outline-success me-3">
-                        <i class="bi bi-search"></i>
-                    </a>
+                    <div class="container-busca me-3">
+                        <div class="caixa-busca">
+                            <input type="text" class="input-busca" placeholder="Buscar produtos sustentáveis...">
+                            <button class="botao-busca" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
                     <a href="#" class="btn btn-outline-success position-relative">
                         <i class="bi bi-cart3"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -57,7 +62,7 @@
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item active"><a href="index.html">Início</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Contato</li>
                 </ol>
             </nav>
@@ -65,7 +70,7 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="contact-hero">
+    <section class="hero-contato">
         <div class="container">
             <h1>Entre em Contato</h1>
             <p>Estamos aqui para ajudar! Entre em contato conosco para tirar dúvidas, fazer sugestões ou solicitar informações sobre nossos produtos sustentáveis.</p>
@@ -73,74 +78,74 @@
     </section>
 
     <!-- Main Contact Section -->
-    <section class="contact-section">
+    <section class="secao-contato">
         <div class="container">
-            <div class="contact-container">
+            <div class="container-contato">
                 <div class="row g-0">
                     <!-- Informações de Contato -->
                     <div class="col-lg-5">
-                        <div class="contact-info">
+                        <div class="info-contato">
                             <h3>Informações de Contato</h3>
                             
-                            <div class="contact-item">
-                                <div class="contact-icon">
+                            <div class="item-contato">
+                                <div class="icone-contato">
                                     <i class="bi bi-geo-alt"></i>
                                 </div>
-                                <div class="contact-details">
+                                <div class="detalhes-contato">
                                     <h5>Endereço</h5>
                                     <p>Rua das Flores, 123<br>Jardim Botânico<br>São Paulo - SP, 01234-567</p>
                                 </div>
                             </div>
 
-                            <div class="contact-item">
-                                <div class="contact-icon">
+                            <div class="item-contato">
+                                <div class="icone-contato">
                                     <i class="bi bi-telephone"></i>
                                 </div>
-                                <div class="contact-details">
+                                <div class="detalhes-contato">
                                     <h5>Telefone</h5>
                                     <p>(11) 99999-9999<br>(11) 88888-8888</p>
                                 </div>
                             </div>
 
-                            <div class="contact-item">
-                                <div class="contact-icon">
+                            <div class="item-contato">
+                                <div class="icone-contato">
                                     <i class="bi bi-envelope"></i>
                                 </div>
-                                <div class="contact-details">
+                                <div class="detalhes-contato">
                                     <h5>E-mail</h5>
                                     <p>contato@ecotrend.com<br>suporte@ecotrend.com</p>
                                 </div>
                             </div>
 
-                            <div class="contact-hours">
+                            <div class="horarios-contato">
                                 <h5>Horário de Funcionamento</h5>
-                                <div class="hours-item">
+                                <div class="item-horario">
                                     <span>Segunda a Sexta:</span>
                                     <span>8h às 18h</span>
                                 </div>
-                                <div class="hours-item">
+                                <div class="item-horario">
                                     <span>Sábado:</span>
                                     <span>9h às 16h</span>
                                 </div>
-                                <div class="hours-item">
+                                <div class="item-horario">
                                     <span>Domingo:</span>
                                     <span>Fechado</span>
                                 </div>
                             </div>
 
-                            <div class="social-links">
+                            <div class="links-sociais">
                                 <h5>Redes Sociais</h5>
-                                <div class="social-icons">
-                                    <a href="#" class="social-icon">
+                                <div class="icones-sociais">
+                                    <a href="#" class="icone-social">
                                         <i class="bi bi-facebook"></i>
                                     </a>
-                                    <a href="#" class="social-icon">
+                                    <a href="#" class="icone-social">
                                         <i class="bi bi-instagram"></i>
                                     </a>
-                                    <a href="#" class="social-icon">
+                                    <a href="#" class="icone-social">
                                         <i class="bi bi-twitter"></i>
                                     </a>
-                                    <a href="#" class="social-icon">
+                                    <a href="#" class="icone-social">
                                         <i class="bi bi-linkedin"></i>
                                     </a>
                                 </div>
@@ -150,7 +155,7 @@
 
                     <!-- Formulário de Contato -->
                     <div class="col-lg-7">
-                        <div class="contact-form">
+                        <div class="formulario-contato">
                             <h3>Envie sua Mensagem</h3>
                             
                             <!-- Alertas -->
@@ -195,7 +200,7 @@
                                     </div>
                                     <div class="col-12">
                                         <label for="message" class="form-label">Mensagem *</label>
-                                        <textarea class="form-control form-textarea" id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+                                        <textarea class="form-control textarea-formulario" id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-check">
@@ -206,7 +211,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="submit-btn" id="submitBtn">
+                                        <button type="submit" class="botao-enviar" id="submitBtn">
                                             <i class="bi bi-send me-2"></i>
                                             Enviar Mensagem
                                         </button>
@@ -221,7 +226,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="secao-faq">
         <div class="container">
             <h3>Perguntas Frequentes</h3>
             <div class="accordion" id="faqAccordion">
@@ -302,14 +307,14 @@
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="secao-mapa">
         <div class="container">
             <h3>Nossa Localização</h3>
-            <div class="map-container">
-                <div class="map-placeholder">
+            <div class="container-mapa">
+                <div class="placeholder-mapa">
                     <i class="bi bi-geo-alt"></i>
                     <h5>Mapa Interativo</h5>
-                    <p class="map-info">
+                    <p class="info-mapa">
                         Aqui será exibido um mapa interativo mostrando nossa localização.<br>
                         Rua das Flores, 123 - Jardim Botânico, São Paulo - SP
                     </p>
@@ -358,7 +363,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 EcoTrend. Todos os direitos reservados. | Desenvolvido com <i class="bi bi-heart-fill text-danger"></i> para um futuro sustentável.</p>
+                <p>&copy; 2025 EcoTrend. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

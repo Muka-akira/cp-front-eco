@@ -38,7 +38,7 @@ function addCarouselProgress() {
     const slides = carousel.querySelectorAll('.carousel-item');
     slides.forEach((slide, index) => {
         const progressBar = document.createElement('div');
-        progressBar.className = 'carousel-progress';
+        progressBar.className = 'progresso-carrossel';
         progressBar.style.cssText = `
             position: absolute;
             bottom: 0;
@@ -50,7 +50,7 @@ function addCarouselProgress() {
         `;
         
         const progress = document.createElement('div');
-        progress.className = 'progress-fill';
+        progress.className = 'barra-progresso-carrossel';
         progress.style.cssText = `
             height: 100%;
             background: white;

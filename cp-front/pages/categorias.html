@@ -38,9 +38,14 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <a href="#" class="btn btn-outline-success me-3">
-                        <i class="bi bi-search"></i>
-                    </a>
+                    <div class="container-busca me-3">
+                        <div class="caixa-busca">
+                            <input type="text" class="input-busca" placeholder="Buscar produtos sustentáveis...">
+                            <button class="botao-busca" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
                     <a href="#" class="btn btn-outline-success position-relative">
                         <i class="bi bi-cart3"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -57,7 +62,7 @@
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item active"><a href="index.html">Início</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Categorias</li>
                 </ol>
             </nav>
@@ -69,11 +74,11 @@
         <div class="row">
             <!-- Filtros Laterais -->
             <div class="col-lg-3">
-                <div class="filters-sidebar">
+                <div class="barra-filtros">
                     <h4 class="mb-4">Filtros</h4>
                     
                     <!-- Categorias -->
-                    <div class="filter-group">
+                    <div class="grupo-filtro">
                         <h6><i class="bi bi-tags"></i> Categorias</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="moda" checked>
@@ -102,11 +107,11 @@
                     </div>
 
                     <!-- Faixa de Preço -->
-                    <div class="filter-group">
+                    <div class="grupo-filtro">
                         <h6><i class="bi bi-currency-dollar"></i> Faixa de Preço</h6>
-                        <div class="price-range">
+                        <div class="faixa-preco">
                             <input type="range" class="form-range" id="priceRange" min="0" max="500" value="500">
-                            <div class="price-values">
+                            <div class="valores-preco">
                                 <span>R$ 0</span>
                                 <span>R$ 500</span>
                             </div>
@@ -114,7 +119,7 @@
                     </div>
 
                     <!-- Marcas -->
-                    <div class="filter-group">
+                    <div class="grupo-filtro">
                         <h6><i class="bi bi-award"></i> Marcas</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="marca1">
@@ -143,7 +148,7 @@
                     </div>
 
                     <!-- Avaliações -->
-                    <div class="filter-group">
+                    <div class="grupo-filtro">
                         <h6><i class="bi bi-star"></i> Avaliações</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="rating5">
@@ -180,7 +185,7 @@
                     </div>
 
                     <!-- Botão Limpar Filtros -->
-                    <button class="btn clear-filters w-100" onclick="clearFilters()">
+                    <button class="btn limpar-filtros w-100" onclick="clearAllFilters()">
                         <i class="bi bi-x-circle me-2"></i>
                         Limpar Filtros
                     </button>
@@ -190,11 +195,11 @@
             <!-- Grid de Produtos -->
             <div class="col-lg-9">
                 <!-- Cabeçalho dos Produtos -->
-                <div class="products-header">
-                    <div class="products-count">
+                <div class="cabecalho-produtos">
+                    <div class="contagem-produtos">
                         Mostrando <strong>8</strong> de <strong>24</strong> produtos
                     </div>
-                    <select class="sort-select" onchange="sortProducts(this.value)">
+                    <select class="seletor-ordenacao" onchange="sortProducts(this.value)">
                         <option value="relevance">Mais Relevantes</option>
                         <option value="price-low">Menor Preço</option>
                         <option value="price-high">Maior Preço</option>
@@ -204,35 +209,35 @@
                 </div>
 
                 <!-- Grid de Produtos -->
-                <div class="products-grid">
+                <div class="grade-produtos" id="productsGrid">
                     <!-- Produto 1 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/camiseta.png" alt="Camiseta Orgânica">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-new">Novo</span>
                                 <span class="badge badge-eco">Eco</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Camiseta Orgânica Premium</h5>
-                            <p class="product-brand">EcoFashion</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 89,90</span>
-                                <span class="old-price">R$ 119,90</span>
-                                <span class="discount">-25%</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Camiseta Orgânica Premium</h5>
+                            <p class="marca-produto">EcoFashion</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 89,90</span>
+                                <span class="preco-antigo">R$ 119,90</span>
+                                <span class="desconto">-25%</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-half"></i>
                                 </div>
-                                <span class="rating-count">(127)</span>
+                                <span class="contagem-avaliacoes">(127)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(1)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(1)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -240,30 +245,30 @@
                     </div>
 
                     <!-- Produto 2 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/shampoo.png" alt="Shampoo Natural">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-sale">Oferta</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Shampoo Sólido Natural</h5>
-                            <p class="product-brand">GreenBeauty</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 45,90</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Shampoo Sólido Natural</h5>
+                            <p class="marca-produto">GreenBeauty</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 45,90</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <span class="rating-count">(89)</span>
+                                <span class="contagem-avaliacoes">(89)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(2)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(2)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -271,30 +276,30 @@
                     </div>
 
                     <!-- Produto 3 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/vaso.png" alt="Vaso Biodegradável">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-eco">Eco</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Vaso Biodegradável Grande</h5>
-                            <p class="product-brand">SustainableHome</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 32,90</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Vaso Biodegradável Grande</h5>
+                            <p class="marca-produto">SustainableHome</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 32,90</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <span class="rating-count">(56)</span>
+                                <span class="contagem-avaliacoes">(56)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(3)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(3)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -302,33 +307,33 @@
                     </div>
 
                     <!-- Produto 4 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/carregador.png" alt="Carregador Solar">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-new">Novo</span>
                                 <span class="badge badge-eco">Eco</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Carregador Solar Portátil</h5>
-                            <p class="product-brand">TechGreen</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 129,90</span>
-                                <span class="old-price">R$ 159,90</span>
-                                <span class="discount">-19%</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Carregador Solar Portátil</h5>
+                            <p class="marca-produto">TechGreen</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 129,90</span>
+                                <span class="preco-antigo">R$ 159,90</span>
+                                <span class="desconto">-19%</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <span class="rating-count">(203)</span>
+                                <span class="contagem-avaliacoes">(203)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(4)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(4)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -336,30 +341,30 @@
                     </div>
 
                     <!-- Produto 5 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/garrafa.png" alt="Garrafa Reutilizável">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-eco">Eco</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Garrafa de Água Sustentável</h5>
-                            <p class="product-brand">EcoFashion</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 65,90</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Garrafa de Água Sustentável</h5>
+                            <p class="marca-produto">EcoFashion</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 65,90</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-half"></i>
                                 </div>
-                                <span class="rating-count">(78)</span>
+                                <span class="contagem-avaliacoes">(78)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(5)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(5)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -367,32 +372,32 @@
                     </div>
 
                     <!-- Produto 6 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/sabonete.png" alt="Sabonete Natural">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-sale">Oferta</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Sabonete Artesanal Natural</h5>
-                            <p class="product-brand">GreenBeauty</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 28,90</span>
-                                <span class="old-price">R$ 38,90</span>
-                                <span class="discount">-26%</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Sabonete Artesanal Natural</h5>
+                            <p class="marca-produto">GreenBeauty</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 28,90</span>
+                                <span class="preco-antigo">R$ 38,90</span>
+                                <span class="desconto">-26%</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <span class="rating-count">(42)</span>
+                                <span class="contagem-avaliacoes">(42)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(6)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(6)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -400,30 +405,30 @@
                     </div>
 
                     <!-- Produto 7 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/luminaria.png" alt="Luminária LED">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-eco">Eco</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Luminária LED Solar</h5>
-                            <p class="product-brand">SustainableHome</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 89,90</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Luminária LED Solar</h5>
+                            <p class="marca-produto">SustainableHome</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 89,90</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <span class="rating-count">(156)</span>
+                                <span class="contagem-avaliacoes">(156)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(7)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(7)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -431,30 +436,30 @@
                     </div>
 
                     <!-- Produto 8 -->
-                    <div class="product-card">
-                        <div class="product-image">
+                    <div class="cartao-produto">
+                        <div class="imagem-produto">
                             <img src="../assets/imgs/fone.png" alt="Fone de Ouvido">
-                            <div class="product-badges">
+                            <div class="badges-produto">
                                 <span class="badge badge-new">Novo</span>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Fone de Ouvido Reciclado</h5>
-                            <p class="product-brand">TechGreen</p>
-                            <div class="product-price">
-                                <span class="current-price">R$ 199,90</span>
+                        <div class="info-produto">
+                            <h5 class="titulo-produto">Fone de Ouvido Reciclado</h5>
+                            <p class="marca-produto">TechGreen</p>
+                            <div class="preco-produto">
+                                <span class="preco-atual">R$ 199,90</span>
                             </div>
-                            <div class="product-rating">
-                                <div class="stars">
+                            <div class="avaliacao-produto">
+                                <div class="estrelas">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-half"></i>
                                 </div>
-                                <span class="rating-count">(89)</span>
+                                <span class="contagem-avaliacoes">(89)</span>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart(8)">
+                            <button class="botao-adicionar-carrinho" onclick="addToCart(8)">
                                 <i class="bi bi-cart-plus me-2"></i>
                                 Adicionar ao Carrinho
                             </button>
@@ -518,7 +523,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 EcoTrend. Todos os direitos reservados. | Desenvolvido com <i class="bi bi-heart-fill text-danger"></i> para um futuro sustentável.</p>
+                <p>&copy; 2025 EcoTrend. Todos os direitos reservados. </p>
             </div>
         </div>
     </footer>
