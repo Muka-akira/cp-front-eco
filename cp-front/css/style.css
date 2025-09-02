@@ -10,7 +10,7 @@
     --bg-light: #f8f9fa;
     --border-color: #dee2e6;
     --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    --shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
 }
 
 /* Reset e Estilos Base */
@@ -337,3 +337,4 @@ footer {
         font-size: 0.7rem;
     }
 }
+
