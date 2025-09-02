@@ -41,6 +41,15 @@ cp-front/
 
 O site funciona perfeitamente em dispositivos móveis, tablets e desktops.
 
+## Integrantes
+
+- Murillo Akira, RM: 561886
+- Igor Dominisk, RM: 562055
+- Murilo Reis, RM: 564053
+- Lucas Zago, RM: 562028
+- Arthur Canaverde, RM: 563029
+
+
 ---
 
 **EcoTrend** - Consumo sustentável para um futuro melhor
