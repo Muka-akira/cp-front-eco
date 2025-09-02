@@ -24,7 +24,7 @@
 }
 
 /* Filtros Laterais */
-.filters-sidebar {
+.barra-filtros {
     background: white;
     border-radius: 15px;
     padding: 2rem;
@@ -34,19 +34,19 @@
     top: 100px;
 }
 
-.filter-group {
+.grupo-filtro {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.filter-group:last-child {
+.grupo-filtro:last-child {
     border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
-.filter-group h6 {
+.grupo-filtro h6 {
     color: var(--text-dark);
     font-weight: 700;
     margin-bottom: 1rem;
@@ -54,7 +54,7 @@
     align-items: center;
 }
 
-.filter-group h6 i {
+.grupo-filtro h6 i {
     margin-right: 0.5rem;
     color: var(--primary-color);
 }
@@ -90,17 +90,17 @@
 }
 
 /* Range de preço */
-.price-range {
+.faixa-preco {
     padding: 0 0.5rem;
 }
 
-.price-range .form-range {
+.faixa-preco .form-range {
     height: 6px;
     border-radius: 3px;
     background: var(--border-color);
 }
 
-.price-range .form-range::-webkit-slider-thumb {
+.faixa-preco .form-range::-webkit-slider-thumb {
     background: var(--primary-color);
     border: none;
     border-radius: 50%;
@@ -110,7 +110,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.price-range .form-range::-moz-range-thumb {
+.faixa-preco .form-range::-moz-range-thumb {
     background: var(--primary-color);
     border: none;
     border-radius: 50%;
@@ -120,7 +120,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.price-values {
+.valores-preco {
     display: flex;
     justify-content: space-between;
     margin-top: 0.5rem;
@@ -129,7 +129,7 @@
 }
 
 /* Botão limpar filtros */
-.clear-filters {
+.limpar-filtros {
     background: var(--text-muted);
     border: none;
     color: white;
@@ -139,13 +139,13 @@
     transition: all 0.3s ease;
 }
 
-.clear-filters:hover {
+.limpar-filtros:hover {
     background: var(--text-dark);
     transform: translateY(-1px);
 }
 
 /* Cabeçalho dos produtos */
-.products-header {
+.cabecalho-produtos {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,12 +154,12 @@
     border-bottom: 1px solid var(--border-color);
 }
 
-.products-count {
+.contagem-produtos {
     color: var(--text-muted);
     font-size: 0.95rem;
 }
 
-.sort-select {
+.seletor-ordenacao {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 0.5rem 1rem;
@@ -170,21 +170,21 @@
     transition: all 0.2s ease;
 }
 
-.sort-select:focus {
+.seletor-ordenacao:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
 }
 
 /* Grid de produtos */
-.products-grid {
+.grade-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
-.product-card {
+.cartao-produto {
     background: white;
     border-radius: 15px;
     overflow: hidden;
@@ -194,30 +194,30 @@
     height: 100%;
 }
 
-.product-card:hover {
+.cartao-produto:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-.product-image {
+.imagem-produto {
     position: relative;
     height: 250px;
     overflow: hidden;
     background: var(--bg-light);
 }
 
-.product-image img {
+.imagem-produto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.product-card:hover .product-image img {
+.cartao-produto:hover .imagem-produto img {
     transform: scale(1.05);
 }
 
-.product-badges {
+.badges-produto {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -246,11 +246,11 @@
     color: white;
 }
 
-.product-info {
+.info-produto {
     padding: 1.5rem;
 }
 
-.product-title {
+.titulo-produto {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-dark);
@@ -263,32 +263,32 @@
     -webkit-box-orient: vertical;
 }
 
-.product-brand {
+.marca-produto {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 0.75rem;
 }
 
-.product-price {
+.preco-produto {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.current-price {
+.preco-atual {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-right: 0.75rem;
 }
 
-.old-price {
+.preco-antigo {
     font-size: 1rem;
     color: var(--text-muted);
     text-decoration: line-through;
 }
 
-.discount {
+.desconto {
     background: #dc3545;
     color: white;
     font-size: 0.8rem;
@@ -297,23 +297,23 @@
     margin-left: auto;
 }
 
-.product-rating {
+.avaliacao-produto {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.stars {
+.estrelas {
     color: #ffc107;
     margin-right: 0.5rem;
 }
 
-.rating-count {
+.contagem-avaliacoes {
     color: var(--text-muted);
     font-size: 0.85rem;
 }
 
-.add-to-cart-btn {
+.botao-adicionar-carrinho {
     width: 100%;
     background: var(--primary-color);
     border: none;
@@ -324,17 +324,17 @@
     transition: all 0.3s ease;
 }
 
-.add-to-cart-btn:hover {
+.botao-adicionar-carrinho:hover {
     background: #157347;
     transform: translateY(-1px);
 }
 
-.add-to-cart-btn:active {
+.botao-adicionar-carrinho:active {
     transform: translateY(0);
 }
 
 /* Paginação */
-.pagination-section {
+.secao-paginacao {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,57 +374,57 @@
 
 /* Responsividade */
 @media (max-width: 992px) {
-    .filters-sidebar {
+    .barra-filtros {
         position: static;
         margin-bottom: 2rem;
     }
     
-    .products-header {
+    .cabecalho-produtos {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
     
-    .products-grid {
+    .grade-produtos {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .products-grid {
+    .grade-produtos {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1rem;
     }
     
-    .product-image {
+    .imagem-produto {
         height: 200px;
     }
     
-    .product-info {
+    .info-produto {
         padding: 1rem;
     }
     
-    .product-title {
+    .titulo-produto {
         font-size: 1rem;
     }
     
-    .current-price {
+    .preco-atual {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 576px) {
-    .products-grid {
+    .grade-produtos {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
-    .filters-sidebar {
+    .barra-filtros {
         padding: 1.5rem;
     }
     
-    .filter-group {
+    .grupo-filtro {
         padding-bottom: 1rem;
         margin-bottom: 1rem;
     }
